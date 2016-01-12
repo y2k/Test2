@@ -5,7 +5,7 @@
 	Analytics.roundReplay = function() {
 		console.log("HACK :: INITIALIZE");
 
-		tapTimes = [0, 600, 600, 600, 600, 600];
+		tapTimes = [0, 500, 600, 600, 600, 600];
 		resetTimer();
 	}
 	
