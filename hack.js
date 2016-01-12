@@ -15,6 +15,7 @@
 		var c = (b - Server.floorsInfo[0].phase) / Server.floorsInfo[0].speed;
 		var d = c - (Server.getTime() * 0.001);
 		var delay = d * 1000;
+		var cos = Math.cos((Server.getTime() * 0.001 + c) * Server.floorsInfo[0].speed + Server.floorsInfo[0].phase)
 
 		console.log("HACK :: DELAY = " + delay);
 
