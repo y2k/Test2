@@ -18,6 +18,6 @@
 		tapGame(500);
 		tapGame(500);
 		tapGame(500);
-		tapGame(500);
+		tapGame(700);
 	}
 })();
