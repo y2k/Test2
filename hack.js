@@ -8,7 +8,7 @@
 			clickEvent.initEvent("click", true, true);
 			screen.dispatchEvent(clickEvent);
 			
-			console.log("HACK :: tap on screen | " + (new Date().getTime() % 10000));
+			console.log("HACK :: tap on screen | " + Server.getTime() + " | " + (new Date().getTime() % 100000));
 		}, lastDelay);
 	}
 
