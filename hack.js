@@ -7,7 +7,7 @@
 		// console.log("HACK :: dT = " + dt + " | floors = " + JSON.stringify(Server.floorsInfo[0]));
 		console.log("HACK :: INITIALIZE");
 
-		tapTimes = [1000, 500, 500, 500, 500, 500];
+		tapTimes = [500, 600, 600, 600, 600, 600];
 		resetTimer();
 	}
 	
