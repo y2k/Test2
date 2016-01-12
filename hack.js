@@ -1,11 +1,15 @@
 (function() {
 	
-	if(window.console && console.log){
-	var old = console.log;
-	console.log = function() {
-		Array.prototype.unshift.call(arguments, 'Report: ');
-		old.apply(this, arguments)
+	Analytics.roundReplay = function() {
+		console.log("HACK :: Analytics.roundReplay");
 	}
+	
+	// if(window.console && console.log){
+	// var old = console.log;
+	// console.log = function() {
+	// 	Array.prototype.unshift.call(arguments, 'Report: ');
+	// 	old.apply(this, arguments)
+	// }
 
 	// var _console = window.console;
 	// var console = {};
