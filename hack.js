@@ -13,7 +13,7 @@
 	}
 
 	Analytics.roundReplay = function() {
-		console.log("HACK :: Analytics.roundReplay");
+		console.log("HACK :: floors = " + Server.floorsInfo);
 		lastDelay = 0;
 
 		tapGame(1000);
