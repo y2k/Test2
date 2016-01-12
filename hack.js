@@ -12,8 +12,9 @@
 	var resetTimer = function() {
 		var a = (Server.getTime() * 0.001 * Server.floorsInfo[0].speed + Server.floorsInfo[0].phase) % (2 * Math.PI);
 		var b = 2 * Math.PI - a;
-		var c = ((b - Server.floorsInfo[0].phase) / Server.floorsInfo[0].speed) - (Server.getTime() * 0.001);
-		var delay = c * 1000;
+		var c = (b - Server.floorsInfo[0].phase) / Server.floorsInfo[0].speed);
+		var d = c - (Server.getTime() * 0.001);
+		var delay = d * 1000;
 
 		console.log("HACK :: DELAY = " + delay);
 
