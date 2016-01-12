@@ -2,7 +2,7 @@
 	Analytics.roundReplay = function() {
 		console.log("HACK :: Analytics.roundReplay");
 		
-		var screen = document.getElementById("screen_wrapper");
+		var screen = document.getElementById("screen");
 		var lastDelay = 0;
 		var tapGame = function(delay) {
 			lastDelay += delay;
