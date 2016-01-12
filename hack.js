@@ -1,25 +1,24 @@
 (function() {
 	var screen = document.getElementById("screen");
+	var tapTimes = null;
 	
 	Analytics.roundReplay = function() {
-		var dt = new Date().getTime() - Server.getTime();
-		console.log("HACK :: dT = " + dt + " | floors = " + JSON.stringify(Server.floorsInfo[0]));
+		// var dt = new Date().getTime() - Server.getTime();
+		// console.log("HACK :: dT = " + dt + " | floors = " + JSON.stringify(Server.floorsInfo[0]));
+		console.log("HACK :: INITIALIZE");
 
-		tapTimes = [
-			1000,
-			500,
-			500,
-			500,
-			500,
-			500];
+		tapTimes = [1000, 500, 500, 500, 500, 500];
 		resetTimer();
 	}
 	
 	var resetTimer = function() {
+		var x = Math.PI - ((Server.getTime() * 0.001 * Server.floorsInfo[0].speed * Server.floorsInfo[0].phase) % Math.PI);
+		var delay = x / (0.001 * Server.floorsInfo[0].speed * Server.floorsInfo[0].phase)
+
 		for (var i = 1; i < tapTimes.length; i++)
 			tapTimes[i] = tapTimes[i] + tapTimes[i - 1];
 		for (var i = 0; i < tapTimes.length; i++)
-			tapTimes[i] = Server.getTime() + tapTimes[i];
+			tapTimes[i] = Server.getTime() + tapTimes[i] + delay;
 		updateTimer();	
 	}
 	
