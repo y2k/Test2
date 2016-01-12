@@ -1,21 +1,19 @@
 (function() {
-	
+	var canvas = document.getElementById("screen");
+	var lastDelay = 0;
+	var tapGame = function(delay) {
+		lastDelay += delay;
+		setTimeout(function() {
+			var clickEvent = document.createEvent("MouseEvents")
+			clickEvent.initEvent("click", true, true);
+			canvas.dispatchEvent(clickEvent)
+		}, lastDelay);
+	}
+
 	Analytics.roundReplay = function() {
 		console.log("HACK :: Analytics.roundReplay");
+		
+		tapGame(500)
+		tapGame(500)
 	}
-	
-	// if(window.console && console.log){
-	// var old = console.log;
-	// console.log = function() {
-	// 	Array.prototype.unshift.call(arguments, 'Report: ');
-	// 	old.apply(this, arguments)
-	// }
-
-	// var _console = window.console;
-	// var console = {};
-	// console.log = function(message){
-	// 		// _console.log("ROUTE: " + message);
-	// }
-	// window.console = console;
-
 })();
