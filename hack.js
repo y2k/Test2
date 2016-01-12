@@ -7,6 +7,8 @@
 			var clickEvent = document.createEvent("MouseEvents");
 			clickEvent.initEvent("click", true, true);
 			screen.dispatchEvent(clickEvent);
+			
+			console.log("HACK :: tap on screen");
 		}, lastDelay);
 	}
 
