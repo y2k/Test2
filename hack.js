@@ -5,7 +5,7 @@
 	Analytics.roundReplay = function() {
 		// console.log("HACK :: INITIALIZE");
 
-		tapTimes = [500, 500, 600, 600, 600, 600, 600];
+		tapTimes = [500, 500, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600, 600];
 		resetTimer();
 	}
 	
@@ -35,7 +35,7 @@
 				clickEvent.initEvent("click", true, true);
 				screen.dispatchEvent(clickEvent);
 				
-				// console.log("HACK :: tap on screen");
+				console.log("HACK :: tap (" + (i+1) + ")");
 				tapTimes[i] = 0;
 				break;
 			}
