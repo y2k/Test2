@@ -13,14 +13,15 @@
 	}
 
 	Analytics.roundReplay = function() {
-		console.log("HACK :: dT = " + (new Date().getTime() - Server.getTime()) + " | floors = " + JSON.stringify(Server.floorsInfo[0]));
-		lastDelay = Server.getTime() - new Date().getTime();
+		var dt = new Date().getTime() - Server.getTime();
+		console.log("HACK :: dT = " + dt + " | floors = " + JSON.stringify(Server.floorsInfo[0]));
+		lastDelay = -dt;
 
 		tapGame(1000);
 		tapGame(500);
 		tapGame(500);
-		tapGame(700);
-		tapGame(200);
-		tapGame(200);
+		tapGame(500);
+		tapGame(500);
+		tapGame(500);
 	}
 })();
