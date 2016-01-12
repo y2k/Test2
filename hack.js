@@ -13,7 +13,7 @@
 	}
 
 	Analytics.roundReplay = function() {
-		console.log("HACK :: floors = " + JSON.stringify(Server.floorsInfo[0]));
+		console.log("HACK :: dT = " + (new Date().getTime() - Server.getTime()) + " | floors = " + JSON.stringify(Server.floorsInfo[0]));
 		lastDelay = 0;
 
 		tapGame(1000);
