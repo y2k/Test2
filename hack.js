@@ -3,8 +3,6 @@
 	var tapTimes = null;
 	
 	Analytics.roundReplay = function() {
-		// var dt = new Date().getTime() - Server.getTime();
-		// console.log("HACK :: dT = " + dt + " | floors = " + JSON.stringify(Server.floorsInfo[0]));
 		console.log("HACK :: INITIALIZE");
 
 		tapTimes = [0, 600, 600, 600, 600, 600];
@@ -38,7 +36,7 @@
 				clickEvent.initEvent("click", true, true);
 				screen.dispatchEvent(clickEvent);
 				
-				console.log("HACK :: tap on screen | " + Server.getTime() + " | " + (new Date().getTime() % 100000));
+				console.log("HACK :: tap on screen");
 				tapTimes[i] = 0;
 				break;
 			}
