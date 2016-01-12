@@ -1,10 +1,9 @@
 (function() {
 
 	var _console = console;
-	console = {
-		function log(message) {
+	var console = {};
+	console.log = function(message){
 			_console.log("ROUTE: " + message);
-		}	
 	}
 
 })();
