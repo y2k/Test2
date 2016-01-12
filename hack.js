@@ -1,10 +1,17 @@
 (function() {
-
-	var _console = window.console;
-	var console = {};
-	console.log = function(message){
-			// _console.log("ROUTE: " + message);
+	
+	if(window.console && console.log){
+	var old = console.log;
+	console.log = function() {
+		Array.prototype.unshift.call(arguments, 'Report: ');
+		old.apply(this, arguments)
 	}
-	window.console = console;
+
+	// var _console = window.console;
+	// var console = {};
+	// console.log = function(message){
+	// 		// _console.log("ROUTE: " + message);
+	// }
+	// window.console = console;
 
 })();
