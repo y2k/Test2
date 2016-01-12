@@ -16,6 +16,8 @@
 		console.log("HACK :: Analytics.roundReplay");
 
 		tapGame(500);
-		tapGame(400);
+		tapGame(500);
+		tapGame(500);
+		tapGame(500);
 	}
 })();
