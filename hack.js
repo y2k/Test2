@@ -1,8 +1,10 @@
 (function() {
 
-	var log = console.log;
-	console.log = function(message) {
-		log("ROUTE: " + message);
-	}	
+	var _console = console;
+	console = {
+		function log(message) {
+			_console.log("ROUTE: " + message);
+		}	
+	}
 
 })();
