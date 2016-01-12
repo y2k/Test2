@@ -2,6 +2,8 @@
 	var screen = document.getElementById("screen_container");
 	var lastDelay = 0;
 	var tapGame = function(delay) {
+		console.log("HACK :: tapGame()");
+		
 		lastDelay += delay;
 		setTimeout(function() {
 			var clickEvent = document.createEvent("MouseEvents");
