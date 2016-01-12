@@ -14,6 +14,7 @@
 
 	Analytics.roundReplay = function() {
 		console.log("HACK :: Analytics.roundReplay");
+		lastDelay = 0;
 
 		tapGame(500);
 		tapGame(500);
