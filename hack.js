@@ -12,13 +12,15 @@
 	}
 	
 	var resetTimer = function() {
-		var x = Math.PI - ((Server.getTime() * 0.001 * Server.floorsInfo[0].speed * Server.floorsInfo[0].phase) % Math.PI);
-		var delay = (2*Math.PI + x) / (0.001 * Server.floorsInfo[0].speed * Server.floorsInfo[0].phase)
+		var x = Math.PI - ((Server.getTime() * 0.001 * Server.floorsInfo[0].speed + Server.floorsInfo[0].phase) % Math.PI);
+		var delay = (2 * Math.PI + x) / (0.001 * Server.floorsInfo[0].speed + Server.floorsInfo[0].phase)
+
+		console.log("HACK :: DELAY = " + delay);
 
 		for (var i = 1; i < tapTimes.length; i++)
 			tapTimes[i] = tapTimes[i] + tapTimes[i - 1];
 		for (var i = 0; i < tapTimes.length; i++)
-			tapTimes[i] = Server.getTime() + tapTimes[i] + delay;
+			tapTimes[i] = tapTimes[i] + Server.getTime() + delay;
 		updateTimer();	
 	}
 	
