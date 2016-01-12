@@ -3,7 +3,7 @@
 	var tapTimes = null;
 	
 	Analytics.roundReplay = function() {
-		console.log("HACK :: INITIALIZE");
+		// console.log("HACK :: INITIALIZE");
 
 		tapTimes = [0, 500, 600, 600, 600, 600];
 		resetTimer();
@@ -35,7 +35,7 @@
 				clickEvent.initEvent("click", true, true);
 				screen.dispatchEvent(clickEvent);
 				
-				console.log("HACK :: tap on screen");
+				// console.log("HACK :: tap on screen");
 				tapTimes[i] = 0;
 				break;
 			}
