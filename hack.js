@@ -4,16 +4,16 @@
 	var tapGame = function(delay) {
 		lastDelay += delay;
 		setTimeout(function() {
-			var clickEvent = document.createEvent("MouseEvents")
+			var clickEvent = document.createEvent("MouseEvents");
 			clickEvent.initEvent("click", true, true);
-			canvas.dispatchEvent(clickEvent)
+			canvas.dispatchEvent(clickEvent);
 		}, lastDelay);
 	}
 
 	Analytics.roundReplay = function() {
 		console.log("HACK :: Analytics.roundReplay");
 		
-		tapGame(500)
-		tapGame(500)
+		tapGame(2000);
+		tapGame(500);
 	}
 })();
