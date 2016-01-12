@@ -1,5 +1,5 @@
 (function() {
-	var screen = document.getElementById("screen_wrapper");
+	var screen = document.getElementById("screen_container");
 	var lastDelay = 0;
 	var tapGame = function(delay) {
 		lastDelay += delay;
