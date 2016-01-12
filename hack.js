@@ -1,12 +1,12 @@
 (function() {
-	var canvas = document.getElementById("screen");
+	var screen = document.getElementById("screen_wrapper");
 	var lastDelay = 0;
 	var tapGame = function(delay) {
 		lastDelay += delay;
 		setTimeout(function() {
 			var clickEvent = document.createEvent("MouseEvents");
 			clickEvent.initEvent("click", true, true);
-			canvas.dispatchEvent(clickEvent);
+			screen.dispatchEvent(clickEvent);
 		}, lastDelay);
 	}
 
