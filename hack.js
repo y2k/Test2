@@ -2,11 +2,9 @@
 	Analytics.roundReplay = function() {
 		console.log("HACK :: Analytics.roundReplay");
 		
-		var screen = document.getElementById("screen_container");
+		var screen = document.getElementById("screen_wrapper");
 		var lastDelay = 0;
 		var tapGame = function(delay) {
-			console.log("HACK :: tapGame()");
-			
 			lastDelay += delay;
 			setTimeout(function() {
 				var clickEvent = document.createEvent("MouseEvents");
