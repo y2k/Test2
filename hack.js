@@ -5,7 +5,7 @@
 	Analytics.roundEnd = function() {
 		for (var i = 0; i < tapTimes.length; i++)
 			tapTimes[i] = 0;
-		setTimeout(Server.replay, 1000);
+		setTimeout(function() { Server.replay(); }, 1000);
 	}
 	
 	Analytics.roundReplay = function() {
