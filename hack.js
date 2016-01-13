@@ -1,6 +1,6 @@
 (function() {
 	var screen = document.getElementById("screen");
-	var tapTimes = null;
+	var tapTimes = [];
 	
 	Analytics.roundEnd = function() {
 		for (var i = 0; i < tapTimes.length; i++)
