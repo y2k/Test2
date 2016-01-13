@@ -2,7 +2,7 @@
 	var screen = document.getElementById("screen");
 	var tapTimes = null;
 	
-	Analytics.roundEnd = = function() {
+	Analytics.roundEnd = function() {
 		for (var i = 0; i < tapTimes.length; i++)
 			tapTimes[i] = 0;
 		setTimeout(Server.replay, 1000);
